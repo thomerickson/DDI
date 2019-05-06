@@ -13,7 +13,7 @@ body {
     margin-top: 110px;
 }
 
-a {
+a, a:visted {
     color: var(--light-teal);
     text-decoration: none;
 }
