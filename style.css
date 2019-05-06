@@ -13,7 +13,12 @@ body {
     margin-top: 110px;
 }
 
-a, a:visted {
+a {
+    color: var(--light-teal);
+    text-decoration: none;
+}
+
+a:visited: {
     color: var(--light-teal);
     text-decoration: none;
 }
