@@ -1,6 +1,7 @@
 :root {
     --dark-bg-color: #2d2d2d;
     --teal: #288e9b;
+    --light-teal: #68cedb;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 a {
-    color: #fff;
+    color: var(--light-teal);
     text-decoration: none;
 }
 
@@ -45,6 +46,16 @@ a:hover {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto 110px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #fff;
+    text-decoration: none;
 }
 
 .menu-item {
@@ -107,4 +118,8 @@ a:hover {
 
 .btn-primary {
     background-color: var(--teal);
+}
+
+.dark-bg {
+    background-color: #111;
 }
