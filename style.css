@@ -47,13 +47,14 @@ a:hover {
     padding: 0;
     text-align: center;
     background-color: var(--teal);
-    background-image: url('./img/DDI-Masthead-Logo.png');
+    /* background-image: url('./img/DDI-Masthead-Logo.png'); */
     background-position: top center;
     background-repeat: no-repeat;
     background-size: auto 110px;
 }
 
 .navbar a {
+    width: 100vw;
     color: #fff;
     text-decoration: none;
 }
@@ -67,16 +68,21 @@ a:hover {
     text-transform: uppercase;
     margin: 0;
     padding: .4rem;
-    margin-top: 45px;
+    margin-top: 35px;
     color: #ffffff;
+}
+
+@media (max-width: 768px) {  
+    .menu-item {
+        margin-top: .4rem;
+    }
 }
 
 .middle-item {
     display: inline-block;
-    text-transform: uppercase;
-    margin: 0 75px;
-    padding: .4rem;
-    margin-top: 45px;
+    margin: 0 10px;
+    /* padding: .4rem; */
+    /* margin-top: 45px; */
 }
 
 .masthead {
@@ -92,7 +98,7 @@ a:hover {
     text-align: center;
 }
 
-.anchor{
+.anchor {
     display: block;
     position: relative;
     padding-top: 110px;
