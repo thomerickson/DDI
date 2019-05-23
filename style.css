@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 :root {
-    --dark-bg-color: #2d2d2d;
+    --dark-bg-color: #111;
     --teal: #288e9b;
     --light-teal: #68cedb;
+    --darkest-teal: #002631;
+    --dark-teal: #003e4a;
+    --medium-teal: #005764;
 }
 
 body {
@@ -9,8 +15,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--dark-bg-color);
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
     margin-top: 110px;
+}
+
+.header-font {
+    font-family: 'Oswald', sans-serif;
 }
 
 a {
@@ -40,6 +51,14 @@ a:hover {
     padding: 0;
 }
 
+.section {
+    padding: 0 0 8rem 0;
+}
+
+.collapse-section {
+    padding: 2rem 0;
+}
+
 .navbar {
     width: 100vw;
     min-height: 110px;
@@ -65,14 +84,16 @@ a:hover {
 }
 
 .menu-item {
+    font-family: Oswald, sans-serif;
     text-transform: uppercase;
     margin: 0;
     padding: .4rem;
-    margin-top: 35px;
+    margin-top: 28px;
     color: #ffffff;
+    font-size: 1.25rem;
 }
 
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
     .menu-item {
         margin-top: .4rem;
     }
@@ -87,7 +108,7 @@ a:hover {
 
 .masthead {
     position: relative;
-    height: 40vh;
+    height: 55vh;
     width: 100vw;
     margin: 0;
     padding: 2rem;
@@ -97,13 +118,6 @@ a:hover {
     background-position: 50% 40%;
     text-align: center;
 }
-
-.anchor {
-    display: block;
-    position: relative;
-    padding-top: 110px;
-    visibility: hidden;
-    }
 
 /* .action-button-container {
     margin: 25vh 0 0 0;
@@ -132,5 +146,58 @@ a:hover {
 }
 
 .dark-bg {
-    background-color: #111;
+    background-color: var(--dark-bg-color);
+}
+
+.teal-bg {
+    background-color: var(--teal);
+}
+
+.darkest-bg {
+    background-color: var(--darkest-teal);
+}
+
+.dark-teal-bg {
+    background-color: var(--dark-teal);
+}
+
+.medium-teal-bg {
+    background-color: var(--medium-teal);
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
+
+.section-header {
+    display: flex;
+    height: 250px;
+    width: 100%;
+    margin: 0;
+    background-position: center 30%;
+    background-repeat: none;
+    background-size: cover;
+    font-family: Oswald, sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 300px;
+    padding: 2rem;
+    justify-content: center;
+    text-shadow: -1px -1px 1px #111, -1px 1px 1px #111, 2px 2px 2px #111, 1px -1px 2px #111;
+    margin-bottom: 3rem;
+}
+
+.daycare-header {
+    background-image: url('./img/SmallDogs1.jpg');
+}
+
+.boarding-header {
+    background-image: url('./img/SmallDogs2.jpg');
+}
+
+.grooming-header {
+    background-image: url('./img/GroomingDog1.jpg');
 }
