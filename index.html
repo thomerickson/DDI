@@ -17,6 +17,8 @@
 
 <body>
 
+  <div class="btn btn-primary" onclick="saveEdits()" style="z-index: 100; position: fixed; top: 100px; right: 100px;">save edits</div>
+
   <div class="container">
     <nav class="navbar fixed-top row justify-content-center">
       <div class="row justify-content-center d-inline d-md-none">
@@ -32,23 +34,32 @@
   </div>
   <div class="container">
     <div class="masthead row align-items-end">
-      <div class="action-button-container mx-auto col-md-10 col-10">
+      <!-- <div class="action-button-container mx-auto col-md-10 col-10">
         <button class="btn btn-primary mt-1 float-md-left">Existing Customers: Schedule Boarding</span>
           <button class="btn btn-primary mt-1 float-md-right">New Customers/Questions? Contact Us!</span>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="section dark-bg pt-5">
     <div class="row">
       <div class="col-10 mx-auto text-white">
-        <p>
+
+        <div class="action-button-container justify-content-center col-12">
+          <button class="btn btn-primary mt-1 float-md-left">Existing Customers: Schedule Boarding</span>
+            <button class="btn btn-primary mt-1 float-md-right">Want to get started? Call us at 503-236-8222</span>
+        </div>
+
+        <div class="pt-4" style="clear: both;" contenteditable="true" id="intro">
           Located in inner SE Portland, our 14,000 sq. ft. facility has a park-like atmosphere with specially designed
           outside and inside play yards for your dog to romp, play and socialize in. Established in 2006, Dogs Dig It is
           one of Portland’s most experienced dog daycare and lodging facilities. Our well trained dog loving staff team
           works together to meet the needs of all our dog clients, specializing in safe, supervised all day doggie
           daycare and open play overnight boarding. We also have a full service dog grooming salon, for all of your dogs
           beauty needs.
-        </p>
+        </div>
+        <div width="100%" class="p-2 text-center">
+          <img src="img/Dog-Icon-white.png" class="img-fluid mx-auto" width="100px">
+        </div>
       </div>
     </div>
   </div>
@@ -61,7 +72,7 @@
       <h2 class="section-header daycare-header">Daycare</h2>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-10" contenteditable="True" id="daycare">
         <!-- <img class="float-md-right img-fluid pl-md-5 pb-md-5 " width="500px" src="./img/SmallDogs1.jpg"> -->
         <h3>Drop Off (starting at 6:30am)</h3>
         <p>
@@ -88,7 +99,7 @@
       </div>
     </div>
     <div id="daycare-pricing" class="row justify-content-center text-white collapse collapse-section darker-bg">
-      <div class="col-md-3">
+      <div class="col-md-5" id="daycare-left" contenteditable="True">
         <strong>Full Day</strong><span class="float-right">$30</span><br />
         Your dog can join our pack for the day and romp in one of our indoor/outdoor open-play yards, for up to 12
         hours. We offer daycare packages with discounts for buying in bulk!<br /><br />
@@ -99,7 +110,7 @@
         <small>*Daycare packages expire within 1 year of purchase. Refunds are only available as a credit to your
           account.</small>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-5" id="daycare-right" contenteditable="True">
         <strong>Partial Day</strong><span class="float-right">$21</span><br />
         Your dog can join our pack for the day and romp in one of our indoor/outdoor open-play yards, for up to 5 1/2
         hours. We offer daycare packages with discounts for buying in bulk!<br /><br />
@@ -110,24 +121,9 @@
         <small>*Daycare packages expire within 1 year of purchase. Refunds are only available as a credit to your
           account.</small>
       </div>
-      <div class="col-md-4">
-        <strong>15 minute walk</strong><span class="float-right">$25</span><br />
-        ​After spending all day playing, some dogs need a change of pace. Your dog can go on a 15 minute walk through
-        the beautiful Buckman neighborhood with a senior staff member. Adding a walk to your dogs day is great way for
-        your pet to get some additional exercise, as well as some one-on-one time with one of of our loving team
-        members!<br /><br />
-
-        <strong>Nail Trim</strong><span class="float-right">$15</span><br /><br />
-
-        <strong>Basic Bath</strong><span class="float-right">$30-35</span><br />
-        A basic bath and towel dry provided by the daycare staff. Your choice of Lavender, Oatmeal, or Hypoallergenic
-        shampoo.<br />
-        Small Dog (30lbs or less) - $30<br />
-        Large Dog (31lbs and up) - $35<br />
-        <br />
-        For additional services such as brush outs, nail smoothing and hair trimming, please visit our grooming
-        section.
-      </div>
+    </div>
+    <div width="100%" class="p-2 text-center">
+      <img src="img/Dog-Icon-white.png" class="img-fluid mx-auto" width="100px">
     </div>
   </div>
 
@@ -139,7 +135,7 @@
       <h2 class="section-header boarding-header">Overnight Boarding</h2>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-10" contenteditable="True" id="boarding">
         <p>
           Dogs love to stay at Dogs Dig It! Our open play boarding lets dogs play and socialize with friends during
           the
@@ -164,7 +160,7 @@
       </div>
     </div>
     <div id="boarding-pricing" class="row justify-content-center text-white collapse collapse-section">
-      <div class="col-md-5">
+      <div class="col-md-5" contenteditable="True" id="boarding-left">
         <strong>Per Night</strong><span class="float-right">$45</span><br />
         Lodging includes a comfy blanket, spacious accommodations, and plenty of affection. We can accommodate most
         pet
@@ -180,7 +176,7 @@
         your pet to get some additional exercise, as well as some one-on-one time with one of of our loving team
         members!<br /><br />
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" contenteditable="True" id="boarding-right">
         <strong>Nail Trim</strong><span class="float-right">$15</span><br /><br />
 
         <strong>Basic Bath</strong><span class="float-right">$30-35</span><br />
@@ -193,6 +189,9 @@
         section.
       </div>
     </div>
+    <div width="100%" class="p-2 text-center">
+      <img src="img/Dog-Icon-white.png" class="img-fluid mx-auto" width="100px">
+    </div>
   </div>
 
   <!-- GROOMING -->
@@ -203,7 +202,7 @@
       <h2 class="section-header grooming-header">Grooming</h2>
     </div>
     <div class="row justify-content-center">
-      <div class="col-10">
+      <div class="col-10" contenteditable="True" id="grooming">
         To make an appointment or to learn more about our full service grooming services~ text, call or email Nancy at
         <strong>503-360-3516</strong><br />
 
@@ -229,7 +228,7 @@
       </div>
     </div>
     <div id="grooming-pricing" class="row justify-content-center text-white collapse collapse-section darkest-bg">
-      <div class="col-md-5">
+      <div class="col-md-5" contenteditable="True" id="grooming-left">
         <strong>Deluxe Full Service Bath</strong><br /><br />
 
         Price quotes are offered on dog by dog basis, based on their specific grooming needs.<br /><br />
@@ -242,7 +241,7 @@
         -Nail trimming and/or smoothing<br />
         -Ear cleaning (plucking on request)<br /><br />
       </div>
-      <div class="col-md-5">
+      <div class="col-md-5" contenteditable="True" id="grooming-right">
         <strong>Deluxe Full Service Bath + Haircut</strong><br /><br />
 
         Price quotes are offered on dog by dog basis, based on their specific grooming needs.<br /><br />
@@ -258,6 +257,9 @@
         -Nail trimming and/or smoothing<br />
         -Ear cleaning (plucking on request) <br />
       </div>
+    </div>
+    <div width="100%" class="p-2 text-center">
+      <img src="img/Dog-Icon-white.png" class="img-fluid mx-auto" width="100px">
     </div>
   </div>
 
@@ -281,6 +283,9 @@
 
         </div>
       </div>
+    </div>
+    <div width="100%" class="p-2 text-center">
+      <img src="img/Dog-Icon-white.png" class="img-fluid mx-auto" width="100px">
     </div>
   </div>
 
@@ -341,41 +346,56 @@
         <a href="./faq.html" class="btn btn-primary">Frequently Asked Questions</a>
 
         <br /><br />
+        <div id="about" contenteditable="True">
+          <strong>The Dogs Dig It Way</strong><br /><br />
 
-        <strong>The Dogs Dig It Way</strong><br /><br />
+          Established in 2006, Dogs Dig It is one of Portland’s most experienced dog daycare and lodging facilities. Our
+          well trained dog loving staff team works together to meet the needs of all our dog clients, specializing in
+          safe, supervised all day doggie daycare and open play overnight boarding. We also have a full service dog
+          grooming salon, for all of your dogs beauty needs. Dogs Dig Its staff of experienced dog handlers make sure
+          that
+          each dog gets the love and care they need, in a fun, supervised healthy environment. Dogs go home tired, happy
+          and relaxed after a day at Dogs Dig It.<br /><br />
+          <strong>Safety</strong><br /><br />
 
-        Established in 2006, Dogs Dig It is one of Portland’s most experienced dog daycare and lodging facilities. Our
-        well trained dog loving staff team works together to meet the needs of all our dog clients, specializing in
-        safe, supervised all day doggie daycare and open play overnight boarding. We also have a full service dog
-        grooming salon, for all of your dogs beauty needs. Dogs Dig Its staff of experienced dog handlers make sure
-        that
-        each dog gets the love and care they need, in a fun, supervised healthy environment. Dogs go home tired, happy
-        and relaxed after a day at Dogs Dig It.<br /><br />
-        <strong>Safety</strong><br /><br />
+          Your dog's safety is of the utmost importance here at Dogs Dig It. That is why we maintain safe dog-to-human
+          ratios, and utilize up to four distinct healthy play areas to create a personalized experience for your pet.
+          Our
+          very experienced staff team participates in a year-round training program, focused on the latest dog
+          behavioral
+          science, techniques for safe supervised off leash play, dog first aid and knowing the different types of dog
+          breeds and their individual play styles.<br /><br />
+          <strong>Our Facility</strong><br /><br />
 
-        Your dog's safety is of the utmost importance here at Dogs Dig It. That is why we maintain safe dog-to-human
-        ratios, and utilize up to four distinct healthy play areas to create a personalized experience for your pet.
-        Our
-        very experienced staff team participates in a year-round training program, focused on the latest dog
-        behavioral
-        science, techniques for safe supervised off leash play, dog first aid and knowing the different types of dog
-        breeds and their individual play styles.<br /><br />
-        <strong>Our Facility</strong><br /><br />
-
-        We have over 14,000 square feet of specially designed play space for dogs to play and socialize with our dog
-        handlers. Your dog can choose to lay in the sun, or take a swim in our pools or just run and play with their
-        friends. Each of our three outdoor yards are covered in soft artificial turf and have shade and rain covers,
-        perfect for a full day of fun in a loving supervised environment. Our overnight guests have many different
-        lodging options available depending on what best suits your dogs needs.<br /><br />
-
+          We have over 14,000 square feet of specially designed play space for dogs to play and socialize with our dog
+          handlers. Your dog can choose to lay in the sun, or take a swim in our pools or just run and play with their
+          friends. Each of our three outdoor yards are covered in soft artificial turf and have shade and rain covers,
+          perfect for a full day of fun in a loving supervised environment. Our overnight guests have many different
+          lodging options available depending on what best suits your dogs needs.<br /><br />
+        </div>
       </div>
     </div>
   </div>
-  </div>
-
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script type="text/javascript">
+    function saveEdits() {
+
+      //get the editable element
+      var editElem = document.getElementById("edit");
+
+      //get the edited element content
+      var userVersion = editElem.innerHTML;
+
+      //save the content to local storage
+      localStorage.userEdits = userVersion;
+
+      //write a confirmation to the user
+      document.getElementById("update").innerHTML = "Edits saved!";
+
+    }
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
   </script>
